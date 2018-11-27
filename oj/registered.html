@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>hl_oj</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style>
+body {background=;font-size:30px;color:#FFF;}
+input {font-size:20px;}
+input.orange {
+    color: white;
+    border: 1px solid #FB8F3D; 
+    background: -webkit-linear-gradient(top, #FDA251, #FB8F3D);
+    background: -moz-linear-gradient(top, #FDA251, #FB8F3D);
+    background: -ms-linear-gradient(top, #FDA251, #FB8F3D);
+}
+
+input.orange:hover {
+    border: 1px solid #EB5200;
+    background: -webkit-linear-gradient(top, #FD924C, #F9760B); 
+    background: -moz-linear-gradient(top, #FD924C, #F9760B); 
+    background: -ms-linear-gradient(top, #FD924C, #F9760B); 
+    box-shadow: 0 1px #EFEFEF;
+}
+
+input.orange:active {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<script>
+function isRight(){
+
+    //验证用户名是否为空
+    var username=document.getElementById("newusername").value;
+    if(username==""||username==null){
+        alert("用户名不能为空！！");
+        return false;
+    }
+
+    //验证密码
+    var password=document.getElementById("newpassword").value;
+    if(password==""||password==null){
+        alert("密码不能为空！！");
+        return false;
+    }
+    var password2=document.getElementById("ispassword").value;
+    if(password2==""||password2==null){
+        alert("请再次输入密码");
+        return false;
+    }
+
+    //验证两次输入密码是否一致
+    if(password!=password2){
+        alert("两次输入的密码不一致！！");
+        return false;
+    }
+    email=document.getElementById("mail").value;
+    if((email.indexOf("@",0) == -1)||(email.indexOf(".",0)==-1)){
+    	alert("请输入正确的邮箱地址！");
+    	return false;
+    }
+    return true;
+}
+</script>
+<body>
+<div style="position:absolute;z-index:-1;width:100%;height:100%;">
+    	<img src="img/1.jpg" width="100%" height="100%" />
+</div>
+<br  />
+<br />
+<br />
+<center>
+请输入注册信息！
+<form action="registered.php" method="post" onsubmit="return isRight()">
+账号：<input type="text" name="newusername" id="newusername" /><br />
+密码：<input type="password" name="newpassword" id="newpassword" /><br />
+确认密码：<input type="password" name="ispassword" id="ispassword" /><br />
+邮箱：<input type="text" name="newemail" id="mail" /><br />
+学校：<input type="text" name="newschool" /><br />
+<input type="submit" name="sub" class='orange'  value="注册" / >
+</form></center>
+</body>
+</html>

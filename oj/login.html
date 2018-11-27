@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>hl_oj</title>
+<style>
+body {background=;font-size:30px;color:#FFF;}
+div {float:left;}
+/* Orange button as seen on blogger.com*/
+input.orange {
+    color: white;
+    border: 1px solid #FB8F3D; 
+    background: -webkit-linear-gradient(top, #FDA251, #FB8F3D);
+    background: -moz-linear-gradient(top, #FDA251, #FB8F3D);
+    background: -ms-linear-gradient(top, #FDA251, #FB8F3D);
+}
+
+input.orange:hover {
+    border: 1px solid #EB5200;
+    background: -webkit-linear-gradient(top, #FD924C, #F9760B); 
+    background: -moz-linear-gradient(top, #FD924C, #F9760B); 
+    background: -ms-linear-gradient(top, #FD924C, #F9760B); 
+    box-shadow: 0 1px #EFEFEF;
+}
+
+input.orange:active {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+<div style="position:absolute;z-index:-1;width:100%;height:100%;">
+    	<img src="img/2.jpg" width="100%" height="100%" />
+</div>
+
+<br  />
+<br />
+<br />
+<center>
+<div style="margin:auto;opacity:0.9;    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;height:300px;width:300px;">
+<h3 style="background:#FFC125;padding:0;">请输入登录信息！</h3>
+<form action="login.php" method="post">
+账号：<input type="text" name="username" /><br />
+密码：<input type="password" name="password" /><br />
+<input type="submit" name="sub" class="orange" value="登录" / >
+<input type="button" name="but" class="orange" onclick="javascrtpt:window.location.href='registered.html';" value="注册" />
+</form></div>
+</center>
+
+</body>
+</html>
